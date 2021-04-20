@@ -1,2 +1,3 @@
-# Master-slave
-完成Redis与Mysql主从复制与读写分离
+# Redis与Mysql主从复制并实现交互
+## 最终要达到的需求蓝图
+## 一对一的交互实现
