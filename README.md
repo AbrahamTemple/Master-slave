@@ -11,7 +11,7 @@
 
 ![Screenshot](res_img/r3.png)
 
-![Screenshot](res_img/2.png)
+![Screenshot](res_img/r2.png)
 
 - 发送请求
 
