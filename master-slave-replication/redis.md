@@ -321,6 +321,3 @@ esac
 
 > bind 0.0.0.0
 
-- 登入
-
-> [root@iZwz995sygwab04zwh0glhZ init.d]# redis-cli -h 8.135.100.252 -p 6379
