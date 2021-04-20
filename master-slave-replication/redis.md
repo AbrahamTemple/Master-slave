@@ -1,13 +1,17 @@
 # Linux下Redis主从复制操作流程
 ## 更改密码
 
-进入redis命令：redis-cli
+进入redis命令：
+> redis-cli
 
-查看现有的redis密码: config get requirepass
+查看现有的redis密码: 
+> config get requirepass
 
-设置redis密码: config set requirepass ****
+设置redis密码: 
+> config set requirepass ****
 
-退出并重新登录: redis-cli -h 127.0.0.1 -p 6379 -a ****
+退出并重新登录: 
+> redis-cli -h 127.0.0.1 -p 6379 -a ****
 
 改了密码之后还是可以不用账号密码登入Redis，但没有任何权限
 
