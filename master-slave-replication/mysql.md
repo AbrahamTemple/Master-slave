@@ -182,9 +182,13 @@ INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
 <property name="needParse">true</property>
 ```
 
-## 启动amoeba
+## 测试
+
+### 启动amoeba
 
 运行bin目录下的launcher
+
+### 实现测试
 
 登入amoeba代理
 
@@ -192,6 +196,36 @@ INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
 mysql -P8066 -uvong -p618168 -h127.0.0.1
 ```
 
+- 代理读取数据，结果跟从机的一样
 
+![Screenshot](docs/situation3.png)
+
+- 代理写入数据，成功
+
+![Screenshot](docs/situation4.png)
+
+- 主机的数据也同步更新了
+
+![Screenshot](docs/situation5.png)
+
+### 宕机测试
+
+- 停止3307端口从机
+
+![Screenshot](docs/situation6.png)
+
+- 查询失败，但插入成功
+
+![Screenshot](docs/situation7.png)
+
+- 开启3307端口从机
+
+![Screenshot](docs/situation8.png)
+
+- 因为记录了上次执行位置，所以仍然查询失败
+
+- 对此重新登录代理，再次查询，成功
+
+![Screenshot](docs/situation9.png)
 
 
