@@ -142,7 +142,10 @@ INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
 
   <property name="authenticateProvider">
     <bean class="com.meidusa.amoeba.mysql.server.MysqlClientAuthenticator">
+      
+      <!-- 自定义登录amoeba的用户名 -->
       <property name="user">vong</property>
+      <!-- 自定义登录amoeba的密码 -->
       <property name="password">618168</property>
 
       <property name="filter">
