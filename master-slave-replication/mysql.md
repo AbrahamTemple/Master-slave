@@ -94,16 +94,11 @@ INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
     <property name="sendBufferSize">64</property>
     <property name="receiveBufferSize">128</property>
 
-    <!-- 监听的端口:主机数据库 -->
-    <property name="port">3306</property>
-
     <!-- 针对的数据库db -->
     <property name="schema">olife</property>
 
-    <!-- 登录3306端口数据库的用户名 -->
+    <!-- 登录的用户名 -->
     <property name="user">root</property>
-    <!-- 登录3306端口数据库的密码 -->
-    <property name="password">666666</property>
 
   </factoryConfig>
   ......
@@ -113,6 +108,10 @@ INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
   <factoryConfig>
     <!-- 主机ip -->
     <property name="ipAddress">127.0.0.1</property>
+    <!-- 监听的端口:主机数据库 -->
+    <property name="port">3306</property>
+    <!-- 登录3306端口主机的密码 -->
+    <property name="password">666666</property>
   </factoryConfig>
 </dbServer>
 
@@ -120,6 +119,10 @@ INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
   <factoryConfig>
     <!-- 从机ip -->
     <property name="ipAddress">127.0.0.1</property>
+    <!-- 监听的端口:从机数据库 -->
+    <property name="port">3307</property>
+    <!-- 登录3307端口从机的密码 -->
+    <property name="password">888888</property>
   </factoryConfig>
 </dbServer>
 
