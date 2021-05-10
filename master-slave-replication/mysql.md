@@ -68,6 +68,8 @@ Slave_SOL_Running:Yes
 
 在主机创建的库和表都会同步到从机，从机没有写的权限，即使数据写入了表在主机也无法被查到，只会占据一行
 
+- 从机写操作
+
 ``` mysql
 INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
 ```
