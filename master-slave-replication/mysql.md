@@ -71,6 +71,14 @@ Slave_SOL_Running:Yes
 ``` mysql
 INSERT INTO o_user(id,NAME) VALUES(2,'Yan')
 ```
+- 从机查询全部
+
+![Screenshot](docs/situation1.png)
+
+- 主机查询全部
+
+![Screenshot](docs/situation2.png)
+
 # MySQL数据库读写分离
 
 下载amoeba：https://sourceforge.net/projects/amoeba/
