@@ -8,6 +8,8 @@
 
 直到主机恢复，哨兵会自动让从机下岗，主机继续担任核心职位
 
+![Screenshot](master-slave-replication/docs/sentinel.jpg)
+
 ## Mysql主从复制与读写分离
 
 - amoeba读写分离
@@ -20,3 +22,4 @@
 
 当主从一方宕机了，那么对应的读写功能就消失了，状态维持直至恢复
 
+![Screenshot](master-slave-replication/docs/amoeba.png)
