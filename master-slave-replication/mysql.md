@@ -1,5 +1,9 @@
 # MySQL数据库主从复制
 
+## 预期
+
+![Screenshot](docs/rwdesigner.png)
+
 ## 准备
 
 主机：127.0.0.1:3306
@@ -7,8 +11,6 @@
 从机：127.0.0.1:3307
 
 代理：127.0.0.1:8066
-
-![Screenshot](docs/rwdesigner.png)
 
 ## 主机
 
