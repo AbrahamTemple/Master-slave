@@ -8,6 +8,8 @@
 
 代理：127.0.0.1:8066
 
+![Screenshot](docs/rwdesigner.png)
+
 ## 主机
 
 在my.cnf里增加一项配置
