@@ -17,7 +17,7 @@
 
 ## 查看当前库信息
 
-``` Bash
+``` shell
 127.0.0.1:6379> info replication
 # Replication
 role:master
@@ -35,7 +35,7 @@ repl_backlog_histlen:0
 
 ## 复制多个配置
 
-``` Bash
+``` shell
 [root@iZwz995sygwab04zwh0glhZ server]# cd /www/server
 [root@iZwz995sygwab04zwh0glhZ server]# ls ./redis
 00-RELEASENOTES  deps       redis.conf       runtest-moduleapi  tests
@@ -86,7 +86,7 @@ redis-server /www/server/redis/redis81.conf
 
 > https://sangsir.com/archives/bt-redis.html
 
-``` Bash
+``` shell
 [root@iZwz995sygwab04zwh0glhZ init.d]# cd /etc/init.d
 [root@iZwz995sygwab04zwh0glhZ init.d]# cp redis redis6380
 [root@iZwz995sygwab04zwh0glhZ init.d]# vim redis6380
@@ -100,7 +100,7 @@ redis-server /www/server/redis/redis81.conf
 
 > STAR_PORT=
 
-``` Bash
+``` shell
 [root@iZwz995sygwab04zwh0glhZ init.d]# chkconfig --add redis6380
 [root@iZwz995sygwab04zwh0glhZ init.d]# chkconfig --list
 [root@iZwz995sygwab04zwh0glhZ init.d]# ./redis6380 start
@@ -124,7 +124,7 @@ root     25592  6407  0 22:16 pts/0    00:00:00       grep --color=auto redis
 
 登入6380端口的Redis并进行配置
 
-``` Bash
+``` shell
 [root@iZwz995sygwab04zwh0glhZ init.d]# redis-cli -p 6380
 127.0.0.1:6380> slaveof 127.0.0.1 6379
 OK
@@ -173,7 +173,7 @@ repl_backlog_histlen:196
 
 原来的Redis停止脚本
 
-``` Bash
+``` shell
 redis_stop(){
         echo "Stopping ..."
         $CLIEXEC shutdown
@@ -186,7 +186,7 @@ redis_stop(){
 
 修改原来的Redis:6380的停止脚本
 
-``` Bash
+``` shell
 redis_stop(){
         echo "Stopping ..."
         $CLIEXEC shutdown
@@ -203,7 +203,7 @@ redis_stop(){
 
 修改原来的Redis:6379的停止脚本
 
-``` Bash
+``` shell
 redis_stop(){
         echo "Stopping ..."
         $CLIEXEC shutdown
@@ -222,7 +222,7 @@ redis_stop(){
 
 ## 哨兵模式
 
-``` Bash
+``` shell
 [root@iZwz995sygwab04zwh0glhZ init.d]# cd /www/server/redis/src
 [root@iZwz995sygwab04zwh0glhZ src]# ./redis-sentinel ../sentinel.conf
 
@@ -267,7 +267,7 @@ redis_stop(){
 
 编写启动脚本
 
-``` Bash
+``` shell
 #!/bin/sh
 #
 # chkconfig: 2345 55 25
